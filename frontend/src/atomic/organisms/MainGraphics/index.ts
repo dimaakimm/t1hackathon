@@ -1,0 +1,1 @@
+export { default as MainGraphics } from './MainGraphics.tsx';
