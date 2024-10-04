@@ -1,6 +1,7 @@
 package com.example.hrmonitorbackend.model;
 
 import com.example.hrmonitorbackend.model.auth.Token;
+import com.example.hrmonitorbackend.model.auth.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +28,14 @@ public class Vacancy {
     @Column(name = "name")
     private Date finish_date;
 
+    @Column(name = "direction")
+    private String direction;
 
+    @Column(name = "salary")
+    private Integer salary;
+
+    @ManyToOne
+    @JoinColumn(name = "recruiter_id")
+    private Recruiter recruiter;
 
 }
