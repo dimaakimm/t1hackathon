@@ -7,7 +7,7 @@ function App() {
 
   return (
     // <Provider store={store}>
-      <div className='body'>
+      <div className='body bg-green-700 h-screen w-screen'>
         <MainTemplate/>
       </div>
     // </Provider>
