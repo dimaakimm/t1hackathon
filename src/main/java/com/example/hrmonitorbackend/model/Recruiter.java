@@ -22,5 +22,5 @@ public class Recruiter {
     private String name;
 
     @OneToMany(mappedBy = "recruiter")
-    private List<Token> tokens;
+    private List<Vacancy> vacancies;
 }
