@@ -132,5 +132,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: auto;
+  align-items: center;
+  background-color: #f6f8fc;
 }
 

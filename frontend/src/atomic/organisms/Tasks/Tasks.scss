@@ -1,0 +1,37 @@
+.accordionBtn{
+    outline: none !important;
+    background-color: #fff !important;
+}
+
+.filters-section{
+    gap: 30px;
+}
+
+.filters-title{
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.filters-block{
+    width: 350px;
+}
+
+.filters-block label{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+}
+.filters-block label + *{
+    width: 50%;
+}
+.filters-checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-checkbox label{
+    margin: 0;
+}
