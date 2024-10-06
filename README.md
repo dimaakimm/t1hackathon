@@ -17,11 +17,26 @@
 * Run ```npm install``` to install the necessary dependencies.
 * Run ```npm run dev``` to start the development server.
 ##### Backend
-...
+
+* install apache maven
+* open cmd go to the project directory
+* Run ```mvn clean install```
+* go to the directory with the compiled JAR file
+* Run JAR file
+
+##### Ml
+* install the packages
+
+```
+pip install torch
+pip install fitz
+pip install PyMuPDF
+pip install transformers
+```
 
 ### Samples of ML summarizing candidate's resume
 ##### 1st Sample
-<details><summary>Resume 1 (from PDF)</summary>Осипов Артём Михайлович
+<details><summary>Resume 1</summary>Осипов Артём Михайлович
 Главный бухгалтер
 Занятость: Полная
 Желаемый график работы: Полный день
@@ -103,7 +118,7 @@
 </details>
 
 ##### 2nd Sample 
-<details><summary>Resume 2 (from PDF)</summary>
+<details><summary>Resume 2</summary>
 Фомин Марк Кириллович
 Повар
 Занятость: Полная
