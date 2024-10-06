@@ -1,14 +1,20 @@
 # README
-Привет!
+Хакатон: "Хакатон Т1: Нижний Новгород"
+Команда: "Мы Вместе"
+========
+### Technologies used
+* Spring Framework (Backend)
+* Spring Security (Security)
+* PostreSQL (DB)
+* ReactJS (Frontend)
+* Chakra UI (UI)
+* Nivo (Charts)
+### Installation and Usage
+* Clone the repository or download the source code.
+* Open the project in your preferred code editor.
+* Run ```npm install``` to install the necessary dependencies.
+* Run ```npm run dev``` to start the development server.
 
-Это репозиторий команды в рамках "Хакатона Т1: Нижний Новгород". Репозиторий используется как хранилище ваших файлов решения, чтобы эксперты могли просмотреть и оценть его.
+### Demo
+A live demo of the React Weather App is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
 
-Мы прикрепили cюда шаблон для питч-сессии, чтобы подготовка к защитам прошла быстрее. Важно: презентацию для питч-сессии необходимо загрузить вместе с файлами решения до стоп-кода.
-
-Все файлы решения должны быть подгружены в этот репозиторий до **20:00 6 октября**. Проверь, что загруженные файлы содержат:
-
-- само решение вместе с файлом ReadMe, где описано решение и инструкции по его воспроизведению для экспертов;
-- презентацию защиты;
-- скринкаст работы решения.
-
-Удачи на хакатоне!
