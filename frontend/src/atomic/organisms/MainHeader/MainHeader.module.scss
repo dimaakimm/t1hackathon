@@ -1,24 +1,28 @@
 .header {
-  height: 64px;
+  height: 70px;
   background: #ffffff;
   border-bottom: 1px solid #e3e7ef;
   top: 0;
   width: 100%;
   z-index: 3;
   transition: all 0.3s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 0 0 15px 15px ;
   margin-bottom: 24px;
+
 }
 .headerLeft{
   display: flex;
+  margin-left: 10px;
 }
 .userName,
 .userSurname{
-  margin: 10px;
-  font-weight: bold;
+  margin: 5px;
 }
-.exitBtn{
+.headerContent{
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }

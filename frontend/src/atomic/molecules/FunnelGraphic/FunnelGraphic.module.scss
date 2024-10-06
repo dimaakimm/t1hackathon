@@ -44,11 +44,14 @@ h3{
 
   .FunnelGraphic{
     // padding-top: 20px;
-    margin: 0 auto;
-    width: 400px;
-    height: 360px;
+    background-color: #F7F9FC;
+    border-radius: 15px;
+
+    padding-bottom: 30px;
+    padding-top: 20px;
     align-content: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
 
   }

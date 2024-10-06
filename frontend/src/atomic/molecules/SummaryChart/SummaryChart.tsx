@@ -1,6 +1,16 @@
 import React, {useMemo, useState} from 'react';
 import styles from "./SummaryChart.module.scss"
-const SummaryChart = ({...props}) => {
+import Title from "../../atoms/Title/Title.tsx";
+import {Text} from "@chakra-ui/react";
+import { ISummaryChartData } from '../../../api/Graphic/types.ts';
+
+interface SummaryChartData {
+    dataBack: ISummaryChartData[];
+    department: string | null;
+    setDepartment: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const SummaryChart: React.FC<SummaryChartData> = (props) => {
     interface Parametr{
         parameter: "department" | "recievesNumber" | "medianTerm"
     }
@@ -87,19 +97,20 @@ const SummaryChart = ({...props}) => {
             props.setDepartment(newDepartment)
         }
     }
-    return (
+    return props.dataBack && (
         <div className={styles.chartContainer}>
+            <Text fontSize={'18px'} pb={'24px'}>Статистика по типу вакансий</Text>
             <table className={styles.SummaryChart}>
                 <tr>
-                    <th style={parameter === "department" ? {backgroundColor:'grey'}: {}} onClick={()=>setParameter("department")}>Отдел</th>
-                    <th style={parameter === "recievesNumber" ? {backgroundColor:'grey'}: {}} onClick={()=>setParameter("recievesNumber")}>Кол-во приемов</th>
-                    <th style={parameter === "medianTerm" ? {backgroundColor:'grey'}: {}} onClick={()=>setParameter("medianTerm")}>Медианный срок закрытия</th>
+                    <th style={parameter === "department" ? {backgroundColor:'#C9C9FF',borderRadius: '15px 0 0 0'}: {borderRadius: '15px 0 0 0', backgroundColor:'#f1f1ff'}}  onClick={()=>setParameter("department")}>Отдел</th>
+                    <th style={parameter === "recievesNumber" ? {backgroundColor:'#C9C9FF'}: {backgroundColor:'#f1f1ff'}} onClick={()=>setParameter("recievesNumber")}>Кол-во приемов</th>
+                    <th style={parameter === "medianTerm" ? {backgroundColor:'#C9C9FF', borderRadius: '0 15px 0 0'}: {borderRadius: '0 15px 0 0', backgroundColor:'#f1f1ff'}} onClick={()=>setParameter("medianTerm")}>Медианный срок закрытия</th>
                 </tr>
 
-                {data.map((row, index) =>
-                    <tr style={{ backgroundColor: props.department===row.department ?  ('darkgrey') :(index % 2 === 0 ? '#f2f2f2' : 'white')}} onClick={()=>handleOnTrClick(row.department)}>
-                        <td>{row.department}</td>
-                        <td>{row.recievesNumber}</td>
+                {props.dataBack.map((row, index) =>
+                    <tr style={{ backgroundColor: props.department===row.department ?  ('#E6C6FF') :(index % 2 === 0 ? '#fafafa' : 'white')}} onClick={()=>handleOnTrClick(row.department)}>
+                        <td>{row.direction}</td>
+                        <td>{row.numberAccepted}</td>
                         <td>{row.medianTerm}</td>
                     </tr>)}
             </table>

@@ -2,3 +2,18 @@
     top: auto !important;
     left: auto !important;
 }
+.ticket{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+}
+
+.kanban-column:last-child .kanban-bordered-box{
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 30px;
+}
+
+.kanban-column:first-child .kanban-bordered-box{
+    padding-left: 0;
+    margin-left: 30px;
+}

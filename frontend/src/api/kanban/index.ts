@@ -1,11 +1,10 @@
-// import { ILoginRequest,
-//     ILoginResponse
-//  } from "./types"
-// import { AuthEndpoints } from "../endpoints"
-// import { AxiosPromise } from "axios"
-// import { axiosInstance } from "../instance"
+import { AxiosPromise } from "axios"
+import { axiosInstance } from "../instance"
+import { KanbanEndpoints } from "../endpoints"
+import { IUserVacancies, IUserVacancyResponse } from "./types"
 
-// export const login = (params: ILoginRequest): AxiosPromise<ILoginResponse> =>
-//     axiosInstance.post(AuthEndpoints.LOGIN, params);
+export const getVacancies = (userId: string): AxiosPromise<IUserVacancies> => axiosInstance.get(KanbanEndpoints.GET_VACANCIES + userId)
 
-// export const logout = (): AxiosPromise => axiosInstance.post(AuthEndpoints.LOGOUT)
+
+//TODO Пока что не готово
+export const getTickets = (vacancyId: string): AxiosPromise => axiosInstance.get(KanbanEndpoints.GET_TICKET + vacancyId)

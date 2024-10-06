@@ -1,3 +1,10 @@
 .BarChartRecruiterMedian{
-  width: 500px;
+
+  user-select: none;
+  background-color: #F7F9FC;
+  border-radius: 15px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }

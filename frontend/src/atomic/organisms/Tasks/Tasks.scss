@@ -2,19 +2,23 @@
     outline: none !important;
     background-color: #fff !important;
 }
-
+.accordionBtn{
+    Select, Input, Checkbox{
+        border: 1px solid #5f5fff ;
+    }
+}
 .filters-section{
     gap: 30px;
 }
 
 .filters-title{
-    width: 150px;
+    width: 200px;
     display: flex;
     align-items: center;
 }
 
 .filters-block{
-    width: 350px;
+    width: 400px;
 }
 
 .filters-block label{
@@ -35,3 +39,4 @@
 .filters-checkbox label{
     margin: 0;
 }
+

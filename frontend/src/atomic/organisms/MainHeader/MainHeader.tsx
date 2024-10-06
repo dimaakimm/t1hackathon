@@ -12,14 +12,17 @@ const MainHeader = () => {
 
     return (
         <Box mb={10} className={styles.header}>
-            <div className={styles.headerLeft}>
-                <Text fontSize='2xl' className={styles.userName}>{userName}</Text>
-                <Text fontSize='2xl' className={styles.userSurname}>{userSurname}</Text>
-            </div>
-            <div className={styles.exitBtn}>
-                <Button p={0} m={0} bg="none" backgroundColor='tomato' color="white">
-                    <CloseIcon m={1}/>
-                </Button>
+            <div className={styles.headerContent}>
+                <div className={styles.headerLeft}>
+                    <Text fontSize='2xl' className={styles.userName}>{userName}</Text>
+                    <Text fontSize='2xl' className={styles.userSurname}>{userSurname}</Text>
+                </div>
+                <div className={styles.exitBtn}>
+                    <Button p={0} mr={5} w={110} h={'35px'} borderRadius={'7.5px'} backgroundColor='#5F5FFF' color="white" gap={15}>
+                        Выход
+                        <img src="../../../../public/arrow.svg" alt="exitBtn"/>
+                    </Button>
+                </div>
             </div>
         </Box>
     );

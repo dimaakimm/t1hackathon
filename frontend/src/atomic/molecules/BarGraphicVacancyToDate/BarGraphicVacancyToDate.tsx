@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import styles from "./BarGraphicVacancyToDate.module.scss"
 import {ResponsiveBar} from "@nivo/bar";
-const BarGraphicVacancyToDate = ({...props}) => {
+import Title from "../../atoms/Title/Title.tsx";
+import {Text} from "@chakra-ui/react";
+import { IBarGraphicVacancyToDate } from '../../../api/Graphic/types.ts';
+
+interface IVacancyToDate {
+    dataBack: IBarGraphicVacancyToDate[];
+    closeDate: string | null;
+    setCloseDate: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const BarGraphicVacancyToDate: React.FC<IVacancyToDate> = (props) => {
     const data = [
         {
             date: 1,
@@ -52,15 +62,32 @@ const BarGraphicVacancyToDate = ({...props}) => {
             value: 40,
         }
     ]
-    return (
+    const findMaxValue = (dataArray) => {
+        let maxValue = -Infinity; // Начальное значение максимального значения
+        dataArray.forEach((item) => {
+            if (item.value > maxValue) {
+                maxValue = item.value; // Обновление максимального значения
+            }
+        });
+
+        return maxValue;
+    };
+    const maxValue = useMemo(()=> {
+            return findMaxValue(data)
+        }, [data])
+        console.log(props.dataBack)
+    return props.dataBack && (
+        <>
+
         <div className={styles.BarGraphicVacancyToDate}>
+            <Text fontSize={'18px'}  >Распределение вакансий по сроку закрытия</Text>
             <ResponsiveBar
-                data={data}
+                data={props.dataBack}
                 keys={[
                     'value',
                 ]}
                 indexBy="date"
-                margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+                margin={{ top: 40, right: 20, bottom: 50, left: 60 }}
                 padding={0.3}
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
@@ -125,9 +152,11 @@ const BarGraphicVacancyToDate = ({...props}) => {
                 barAriaLabel={e=>e.id+": "+e.formattedValue+" in country: "+e.indexValue}
                 colors={({ id, data }) => {
                     if (data.date === props.closeDate)
-                        return 'hsl(198, 70%, 50%)'
-                    else
-                        return 'hsl(10, 70%, 70%)';
+                        return '#E6C6FF'
+                    else {
+                        return `rgba(174, 174, 255,${data.value/maxValue > 0.3 ? data.value/maxValue : 0.3})`
+                    }
+
                 }}
                 onClick={(nodeData, e) => {
                     if (nodeData?.data.date === props.closeDate) {
@@ -139,6 +168,8 @@ const BarGraphicVacancyToDate = ({...props}) => {
                 }}
             />
         </div>
+
+            </>
     );
 };
 

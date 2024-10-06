@@ -1,4 +1,12 @@
 .BarGraphicVacancyToDate{
-  width: 600px;
-  margin: 0 auto
+
+  user-select: none;
+  background-color: #F7F9FC;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  padding: 20px;
 }

@@ -1,15 +1,22 @@
 .SummaryChart{
-
+  border-radius: 15px;
+  width: 100%;
+  tr{
+    cursor: pointer;
+    border-radius: 15px 15px 0 0 ;
+  }
   td, th{
     padding: 10px;
-    width: 200px;
+    width: 30%;
     height: 15px;
   }
 }
 .chartContainer{
-  max-height: 400px;
-  margin: 20px 50px;
+  margin: 0;
+  padding: 16px;
   overflow: auto;
+  background-color: #F7F9FC;
+  border-radius: 15px;
 }
 .chartBody{
 

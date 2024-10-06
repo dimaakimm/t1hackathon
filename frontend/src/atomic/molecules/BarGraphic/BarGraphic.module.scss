@@ -1,6 +1,10 @@
 .BarGraphic{
+  user-select: none;
   display: flex;
-  align-items: center;
-  margin: 0 auto;
-  width: 600px;
+  height: 500px;
+  width: 100%;
+  background-color: #F7F9FC;
+  border-radius: 15px;
+  flex-direction: column;
+  padding: 20px;
 }

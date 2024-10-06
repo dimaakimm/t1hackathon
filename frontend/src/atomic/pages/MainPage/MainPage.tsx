@@ -16,7 +16,6 @@ const MainPage: React.FC = () => {
   return (
     <main>
         <MainHeader />
-        <Title>Вакансии</Title>
         <AdminTasks>
         </AdminTasks>
         {/* <TasksBlock /> */}

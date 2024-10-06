@@ -14,6 +14,7 @@
 .generalInfo{
   display: flex;
   gap: 100px;
+  padding: 20px;
   Box{
     display: flex;
   }
@@ -24,9 +25,13 @@
     display: flex;
     justify-content: center;
   }
-  padding: 20px;
+
 }
 .startDate,
 .endDate{
   margin: 10px;
+}
+.h{
+  color:#5F5FFF;
+
 }

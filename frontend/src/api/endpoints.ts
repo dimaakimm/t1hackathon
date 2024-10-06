@@ -18,3 +18,12 @@
 //     DELETE_FILE = "/delta/path-pages",
 //     DELETE_FOLDER = "/delta/path-pages/delete/path/",
 // }
+
+export const enum KanbanEndpoints {
+    GET_VACANCIES = "/vacancy/show/user/",
+    GET_TICKET = "/vacancy/show/"
+}
+
+export const enum GraphicEndpoints {
+    GET_GRAPHIC_INFO = "/graph/get/admin", 
+}

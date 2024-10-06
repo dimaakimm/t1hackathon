@@ -5,7 +5,7 @@ const Title = (props: Readonly<TextProps>) => {
         <Text
             w="full"
             color="#343b4c"
-            fontSize="24px"
+            fontSize="30px"
             lineHeight="28px"
             fontWeight={500}
             {...props}
