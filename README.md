@@ -4,8 +4,7 @@
 Трек: "HR-монитор: управление эффективностью"
 ## Demo
 A live demo of the HR-monitoring app is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
-## Демо
-Демонстрация функционала приложения доступна по [ССЫЛКЕ](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
+## Демонстрация функционала приложения доступна по [ССЫЛКЕ](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
 ========
 ### Technologies used
 * Spring Framework (Backend)
