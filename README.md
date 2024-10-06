@@ -1,6 +1,7 @@
 # README
 Хакатон: "Хакатон Т1: Нижний Новгород"
 Команда: "Мы Вместе"
+Трек: "HR-монитор: управление эффективностью"
 ========
 ### Technologies used
 * Spring Framework (Backend)
@@ -19,5 +20,5 @@
 ...
 
 ### Demo
-A live demo of the is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
+A live demo of the HR-monitoring app is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
 
