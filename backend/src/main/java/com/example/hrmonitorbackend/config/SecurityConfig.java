@@ -48,8 +48,9 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(
-                        req->req.requestMatchers("/login/**","/register/**", "/refresh_token/**", "/swagger-ui/**",
-                                        "/swagger-resources/*", "/v3/api-docs/**", "/delta/path-pages/download/**", "/delta/path-pages/image/**")
+                        req->req.
+                                requestMatchers("**","/login/**","/register/**", "/refresh_token/**", "/swagger-ui/**",
+                                        "/swagger-resources/*", "/v3/api-docs/**")
                                 .permitAll()
                                 .requestMatchers("/admin_only/**").hasAuthority("ADMIN")
                                 .anyRequest()

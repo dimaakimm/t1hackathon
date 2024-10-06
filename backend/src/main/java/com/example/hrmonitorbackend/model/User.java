@@ -1,5 +1,7 @@
-package com.example.hrmonitorbackend.model.auth;
+package com.example.hrmonitorbackend.model;
 
+import com.example.hrmonitorbackend.model.auth.Role;
+import com.example.hrmonitorbackend.model.auth.Token;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +23,9 @@ public class User implements UserDetails {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "email")
     private String email;
 
@@ -32,6 +37,12 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
+
+    @Column(name = "active")
+    private Boolean active;
+
+    @OneToMany(mappedBy = "user")
+    private List<Vacancy> vacancies;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -1,18 +1,16 @@
 package com.example.hrmonitorbackend.model;
 
-import com.example.hrmonitorbackend.model.auth.Role;
-import com.example.hrmonitorbackend.model.auth.Token;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.sql.Date;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "recruiter")
-public class Recruiter {
+@Table(name = "status")
+public class Status {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -21,6 +19,10 @@ public class Recruiter {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "recruiter")
-    private List<Vacancy> vacancies;
+    @Column(name = "date")
+    private Date date;
+
+    @ManyToOne
+    @JoinColumn(name = "candidate_id")
+    private Candidate candidate;
 }

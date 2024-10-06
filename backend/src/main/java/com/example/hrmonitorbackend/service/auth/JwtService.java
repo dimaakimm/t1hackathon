@@ -1,6 +1,6 @@
 package com.example.hrmonitorbackend.service.auth;
 
-import com.example.hrmonitorbackend.model.auth.User;
+import com.example.hrmonitorbackend.model.User;
 import com.example.hrmonitorbackend.repository.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

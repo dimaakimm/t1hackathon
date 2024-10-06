@@ -1,5 +1,6 @@
 package com.example.hrmonitorbackend.model.auth;
 
+import com.example.hrmonitorbackend.model.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

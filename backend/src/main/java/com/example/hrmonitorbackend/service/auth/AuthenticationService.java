@@ -6,7 +6,7 @@ import com.example.hrmonitorbackend.exceptions.LoginException;
 import com.example.hrmonitorbackend.exceptions.NotFoundByEmailException;
 import com.example.hrmonitorbackend.model.auth.Role;
 import com.example.hrmonitorbackend.model.auth.Token;
-import com.example.hrmonitorbackend.model.auth.User;
+import com.example.hrmonitorbackend.model.User;
 import com.example.hrmonitorbackend.repository.TokenRepository;
 import com.example.hrmonitorbackend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

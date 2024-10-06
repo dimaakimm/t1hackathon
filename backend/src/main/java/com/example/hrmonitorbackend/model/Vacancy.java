@@ -1,13 +1,11 @@
 package com.example.hrmonitorbackend.model;
 
-import com.example.hrmonitorbackend.model.auth.Token;
-import com.example.hrmonitorbackend.model.auth.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-import java.util.List;
+import java.sql.Date;
+
 
 @Entity
 @Getter
@@ -22,11 +20,14 @@ public class Vacancy {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "name")
-    private Date start_date;
+    @Column(name = "start_date")
+    private Date startDate;
 
-    @Column(name = "name")
-    private Date finish_date;
+    @Column(name = "finish_date")
+    private Date finishDate;
+
+    @Column(name = "deadline_date")
+    private Date deadlineDate;
 
     @Column(name = "direction")
     private String direction;
@@ -34,8 +35,11 @@ public class Vacancy {
     @Column(name = "salary")
     private Integer salary;
 
+    @Column(name = "is_open")
+    private Boolean isOpen;
+
     @ManyToOne
-    @JoinColumn(name = "recruiter_id")
-    private Recruiter recruiter;
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }
