@@ -2,6 +2,8 @@
 Хакатон: "Хакатон Т1: Нижний Новгород"
 Команда: "Мы Вместе"
 Трек: "HR-монитор: управление эффективностью"
+## Demo
+A live demo of the HR-monitoring app is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
 ========
 ### Technologies used
 * Spring Framework (Backend)
@@ -191,6 +193,5 @@ pip install transformers
 Занятость: Полная Желаемая зарплата: от 45 000 руб. Дата рождения: 11.12.1989 г. (32 года) О себе Личные качества Умение быстро ориентироваться в ситуации, требовательность к себе и окружающим, стремление к организации четкого и сбалансированного производственного процесса.
 </details>
 
-### Demo
-A live demo of the HR-monitoring app is available at [THIS LINK](https://disk.yandex.ru/d/4Rwy5Ec-dDarNA)
+
 
