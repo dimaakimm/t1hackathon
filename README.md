@@ -21,7 +21,7 @@
 
 ### Samples of ML summarizing candidate's resume
 ##### 1st Sample
-<details><summary>Resume 1</summary>Осипов Артём Михайлович
+<details><summary>Resume 1 (from PDF)</summary>Осипов Артём Михайлович
 Главный бухгалтер
 Занятость: Полная
 Желаемый график работы: Полный день
@@ -103,7 +103,7 @@
 </details>
 
 ##### 2nd Sample 
-<details><summary>Resume 2</summary>
+<details><summary>Resume 2 (from PDF)</summary>
 Фомин Марк Кириллович
 Повар
 Занятость: Полная
